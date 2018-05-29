@@ -85,6 +85,7 @@ class App extends Component {
     ev.preventDefault()
     this.state.contract.transfer(this.state.to, this.state.amount).then(() => {
       alert('Transfer successful!')
+      window.location.reload()
     }).catch(err => {
       console.error(err)
     })
