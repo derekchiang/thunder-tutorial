@@ -1,3 +1,5 @@
+let mnemonic = "<Insert your mnemonic here>";
+
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
@@ -8,9 +10,10 @@ module.exports = {
       network_id: "*" // Match any network id
     },
     thunder: {
-      host: "testnet.thundertoken.com",
-      port: 8545,
-      network_id: "*" // Match any network id
+      provider: function() {
+        return new HDWalletProvider(mnemonic, "https://testnet.thundertoken.com")
+      },
+      network_id: 4
     }
   }
 };
