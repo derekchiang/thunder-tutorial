@@ -1,8 +1,5 @@
 {
-  "ignore": [
-    "README.md",
-    ".gitignore"
-  ],
+  "ignore": [],
   "commands": {
     "Compile contracts": "truffle compile",
     "Migrate contracts": "truffle migrate",
